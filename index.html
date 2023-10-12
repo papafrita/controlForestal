@@ -11,12 +11,13 @@
 </head>
 
 <body>
-  <h1 style="font-family:Arial, Helvetica, sans-serif;font-size: 40px;">Control Forestal - Los LLeuques </h1>
+  <h1 style="font-family:Arial, Helvetica, sans-serif;font-size: 30px;text-align: center;">Control Forestal - Los LLeuques </h1>
 
   <ul id="despachos-list"></ul>
 
   <div class="container">
     <div class="row">
+      <h4 style="font-family:Arial, Helvetica, sans-serif;font-size: 20px;"> Últimos Despachos</h4>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -56,7 +57,8 @@
       </div>
       <div class="col">
         <div>
-          <canvas width="200" id="myChartD"></canvas>
+          <h5 style="color:#666666;font-size:16px;text-align:center;">Destinos</h5>
+          <canvas style="margin: auto;" width="200" id="myChartD"></canvas>
         </div>
       </div>
     </div>
@@ -68,7 +70,8 @@
       </div>
       <div class="col">
         <div>
-          <canvas width="250" id="myChartD2"></canvas>
+          <h5 style="color:#666666;font-size:16px;text-align:center;">Destinos</h5>
+          <canvas style="margin: auto;" width="200" id="myChartD2"></canvas>
         </div>
       </div>
     </div>
@@ -78,7 +81,9 @@
       <div class="col">
         <canvas id="myChart3"></canvas>
       </div>
-      <div class="col"></div>
+      <div class="col">
+        <canvas id="myChart5"></canvas>
+      </div>
     </div>
     <hr style="width: 80%;margin-bottom: 2em;">
 
@@ -88,7 +93,8 @@
       </div>
       <div class="col">
         <div>
-          <canvas width="250" id="myChartD3"></canvas>
+          <h5 style="color:#666666;font-size:16px;text-align:center;">Destinos</h5>
+          <canvas style="margin: auto;" width="200" id="myChartD3"></canvas>
         </div>
       </div>
     </div>
@@ -174,11 +180,12 @@
       type: 'bar',
 
       data: {
-        labels: ['3.3 D', '3.3 G', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+', 'Pulpa', 'Aserrable'],
+        labels: ['24', '26', '28', '30', '32', '34', '36', '38', '40', '42'],
         datasets: [{
-          label: 'Producción Total Los Lleuques',
-          data: [111.8, 98.8, 66.3, 0, 49.2, 34.3, 30.8, 0, 63.8, 151.1],
-          borderWidth: 1
+          label: 'Esquema de Trozado 3.3 Grueso',
+          data: [4, 1, 10, 12, 6, 5, 8, 11, 21, 22],
+          borderWidth: 1,
+          backgroundColor: '#38C22590'
         }]
       },
       options: {
