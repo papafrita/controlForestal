@@ -6,35 +6,66 @@
     <title>API Control</title>
 </head>
 <body>
-    <h1>Control Forestal  </h1>
+    <h1 style="font-family:Arial, Helvetica, sans-serif;font-size: 40px;">Control Forestal  </h1>
+    
     <ul id="despachos-list"></ul>
-    <div style="width:60%">
+
+    <div style="width:50%;float: left;">
         <canvas  id="myChart"></canvas>
+    </div>
+
+    <div style="width:40%;float: right;">
+      <div>
+        <canvas width="250" id="myChartD"></canvas>
       </div>
-      <div style="width:60%">
+    </div>
+
+    <hr style="width: 80%;margin-bottom: 2em;margin-top:2em ;">
+
+    <div style="width:50%;float: left;">
         <canvas  id="myChart2"></canvas>
+    </div>
+
+    <div style="width:40%;float: right;">
+      <div>
+        <canvas width="250" id="myChartD2"></canvas>
       </div>
-      <div style="width:60%">
-        <canvas  id="myChart3"></canvas>
-      </div>  
-      <div style="width:60%">
-        <canvas  id="myChart4"></canvas>
-      </div>    
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </div>
+      
+    <hr style="width: 80%;margin-bottom: 2em;">
+    
+    <div style="width:50%">
+      <canvas  id="myChart3"></canvas>
+    </div> 
+    
+    
+    <hr style="width: 80%;margin-bottom: 2em;"> 
+    
+    <div style="width:50%">
+      <canvas  id="myChart4"></canvas>
+    </div>    
+    <div style="width:40%;float: right;">
+      <div>
+        <canvas width="250" id="myChartD3"></canvas>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script>
         const ctx = document.getElementById('myChart');
-      
+  Chart.defaults.font.size = 16;
+
         new Chart(ctx, {
           type: 'bar',
           
           data: {
             labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'],
             datasets: [{
-              label: 'Metros Despachados esta Semana',
+              label: 'Metros Despachados esta Semana: 110,54 ',
               data: [0,110.542, 0, 0, 0, 0, 0],
               borderWidth: 1,
-              backgroundColor:["green"]
+              backgroundColor:'#F1624490'
             }]
           },
           options: {
@@ -42,7 +73,17 @@
               y: {
                 beginAtZero: true
               }
+            },
+            plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        //size: 26
+                    }
+                }
             }
+        }
           }
         });
       </script>
@@ -51,13 +92,14 @@
 <script>
   const ctx2 = document.getElementById('myChart2');
 
+
   new Chart(ctx2, {
     type: 'bar',
     
     data: {
       labels: ['Metro Ruma','2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0 y más'],
       datasets: [{
-        label: 'Metros Despachados este Mes',
+        label: 'Metros Despachados este Mes: 511,63',
         data: [0,0, 111.4, 136.53, 0, 198.61, 34.31,30,76,0],
         borderWidth: 1
       }]
@@ -68,7 +110,17 @@
           beginAtZero: true
         }
       }
-    }
+    },
+            plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 38
+                    }
+                }
+            }
+        }
   });
 </script>
 <script>
@@ -91,7 +143,17 @@
           beginAtZero: true
         }
       }
-    }
+    },
+            plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 28
+                    }
+                }
+            }
+        }
   });
 </script>
 
@@ -115,7 +177,17 @@
           beginAtZero: true
         }
       }
-    }
+    },
+            plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 28
+                    }
+                }
+            }
+        }
   });
 </script>
 <script>
@@ -127,7 +199,7 @@
     data: {
       labels: ['Metro Ruma','2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0 y más'],
       datasets: [{
-        label: 'Total Despachos Los Lleuques',
+        label: 'Total Despachos Los Lleuques: 3943,95',
         data: [295.03, 101.29, 806.45, 1183.6, 300.8, 1156.99,34.31,30.76,34.59],
         borderWidth: 1
       }]
@@ -138,10 +210,111 @@
           beginAtZero: true
         }
       }
-    }
+    },
+            plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 28
+                    }
+                }
+            }
+        }
   });
 </script>
 
+<script>
+var ctx6 = document.getElementById("myChartD");
+var myChart = new Chart(ctx6, {
+  type: 'pie',
+  data: {
+    labels: ['KM 10', 'COLPO'],
+    datasets: [{
+      label: 'Metros Despachados',
+      data: [71.151, 39.391],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.5)',
+        'rgba(54, 162, 235, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+   	//cutoutPercentage: 40,
+    responsive: false,
+
+  }
+});
+</script>
+<script>
+  var ctx7 = document.getElementById("myChartD2");
+  var myChart = new Chart(ctx7, {
+    type: 'pie',
+    data: {
+      labels: ['KM 10', 'COLPO', 'RF Lumber'],
+      datasets: [{
+        label: 'Metros Despachados',
+        data: [178.27, 227.85,105.50 ],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+       //cutoutPercentage: 40,
+      responsive: false,
+  
+    }
+  });
+  </script>
+  <script>
+    var ctx8 = document.getElementById("myChartD3");
+    var myChart = new Chart(ctx8, {
+      type: 'pie',
+      data: {
+        labels: ['KM 10', 'COLPO', 'RF Lumber', 'Aravena','Cherquenco'],
+        datasets: [{
+          label: 'Metros Despachados',
+          data: [	1839.56, 1703.85,105.50,251.5 , 43.53],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(0, 99, 132, 0.5)',
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(0, 99, 132, 1)',
+            
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+         //cutoutPercentage: 40,
+        responsive: false,
+    
+      }
+    });
+    </script>
 
     <script>
         // Function to fetch and display data from the API
@@ -197,7 +370,7 @@ let last_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
                       console.log(`The first date of the week is: ${first_day_of_the_week}`); 
                       if (despacho.metros_duros == 0) {
                         contador_0= contador_0+1}
-                      else{
+                      /*else{
                         const listItem = document.createElement('li');
                         switch(fecha.getDay()){
                         case 1: diasemana="Lunes";
@@ -220,7 +393,7 @@ let last_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
                       fecha=fecha.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"});    
                       listItem.textContent = `Guía: ${despacho.numero_guia_despacho}, Fecha: ${fecha} Metros: ${despacho.metros_duros}, Rodal: ${despacho.rodal}`;
                       despachosList.appendChild(listItem);
-                          contador_m3=contador_m3 + 1}
+                          contador_m3=contador_m3 + 1} */
                       } )                       
                     console.log(contador_0);
                     console.log(contador_m3);
