@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,6 +8,9 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <title>API Control</title>
+
+  <!-- <script src="apiscript.js"></script> -->
+
 </head>
 
 <body>
@@ -21,7 +24,8 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">Guia</th>
+            <th scope="col">Guia JAS</th>
+            <th scope="col">Guia SII</th>
             <th scope="col">Fecha</th>
             <th scope="col">Destino</th>
             <th scope="col">Metros</th>
@@ -29,22 +33,25 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">119</th>
-            <td>2023-10-10</td>
-            <td>Km 10</td>
-            <td>33.428</td>
+            <th scope="row" id="desp_1_1">137</th>
+            <td id="desp_1_2">16433</td>
+            <td id="desp_1_3">2023-10-16</td>
+            <td id="desp_1_4">Maihue</td>
+            <td id="desp_1_5">38.672</td>
           </tr>
           <tr>
-            <th scope="row">118</th>
-            <td>2023-10-10</td>
-            <td>Km 10</td>
-            <td>37.723</td>
+            <th scope="row" id="desp_2_1">136</th>
+            <td id="desp_2_2">16432</td>
+            <td id="desp_2_3">2023-10-16</td>
+            <td id="desp_2_4">Maihue</td>
+            <td id="desp_2_5">36.153</td>
           </tr>
           <tr>
-            <th scope="row">117</th>
-            <td>2023-10-10</td>
-            <td>Km 10</td>
-            <td>39,391</td>
+            <th scope="row" id="desp_3_1">119</th>
+            <td id="desp_3_2">16431</td>
+            <td id="desp_3_3">2023-10-16</td>
+            <td id="desp_3_4">Maihue</td>
+            <td id="desp_3_5">35.467</td>
           </tr>
         </tbody>
       </table>
@@ -83,15 +90,15 @@
         <tbody>
           <tr>
             <td>0</td>
+            <td>107,292</td>
             <td>0</td>
-            <td>39,39</td>
             <td>0</td>
             <td>0</td>
-            <td>40,38</td>
             <td>0</td>
-            <td>30,76</td>
             <td>0</td>
-            <th scope="row">110,54</th>
+            <td>0</td>
+            <td>0</td>
+            <th scope="row">107,292</th>
           </tr>
         </tbody>
       </table>
@@ -129,15 +136,15 @@
         <tbody>
           <tr>
             <td>0</td>
-            <td>0</td>
-            <td>111,40</td>
-            <td>136,53</td>
-            <td>0</td>
-            <td>198,61</td>
+            <td>214,74</td>
+            <td>185,26</td>
+            <td>268,86</td>
+            <td>6,69</td>
+            <td>410,78</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>0</td>
-            <th scope="row">511,63</th>
+            <th scope="row">1151,42</th>
           </tr>
         </tbody>
       </table>
@@ -221,15 +228,15 @@
         <tbody>
           <tr>
             <td>295,03</td>
-            <td>101,29</td>
-            <td>806,45</td>
-            <td>1183.60</td>
-            <td>300,89</td>
-            <td>1156,99</td>
+            <td>316,03</td>
+            <td>880,31</td>
+            <td>1315,93</td>
+            <td>307,58</td>
+            <td>1369,16</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>34,59</td>
-            <th scope="row">3943,95</th>
+            <th scope="row">4583,74</th>
           </tr>
         </tbody>
       </table>
@@ -250,7 +257,7 @@
         labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
         datasets: [{
           label: 'Metros Despachados esta Semana',
-          data: [0, 110.542, 0, 0, 0, 0, 0],
+          data: [0, 107.292, 0, 0, 0, 0, 0],
           borderWidth: 1
         }]
       },
@@ -286,7 +293,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Metros Despachados este Mes',
-          data: [0, 0, 111.4, 136.53, 0, 198.61, 34.31, 30, 76, 0],
+          data: [0, 214.74, 185.26,268.86, 6.69, 410.78, 34.31, 30.76, 0],
           borderWidth: 1
         }]
       },
@@ -319,7 +326,7 @@
         labels: ['24', '26', '28', '30', '32', '34', '36', '38', '40', '42'],
         datasets: [{
           label: 'Esquema de Trozado 3.3 Grueso',
-          data: [4, 1, 10, 12, 6, 5, 8, 11, 21, 22],
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           borderWidth: 1,
           backgroundColor: '#38C22590'
         }]
@@ -354,7 +361,7 @@
         labels: ['3.3 D', '3.3 G', '4.0', '6.0', '7.0', '8.0', 'Pulpa', 'Aserrable'],
         datasets: [{
           label: 'Producción Los LLeuques',
-          data: [111.8, 98.8, 66.3, 49.2, 34.3, 30.8, 63.8, 151.1],
+          data: [136.4, 278, 185.4, 162.8, 34.3, 30.8, 168.2, 0],
           borderWidth: 1,
           backgroundColor: '#F1624490'
         }]
@@ -388,7 +395,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Total Despachos Los Lleuques',
-          data: [295.03, 101.29, 806.45, 1183.6, 300.8, 1156.99, 34.31, 30.76, 34.59],
+          data: [295.03, 316.03, 880.31, 1315.93, 307.58, 1369.16, 34.31, 30.76, 34.59],
           borderWidth: 1
         }]
       },
@@ -417,17 +424,15 @@
     var myChart = new Chart(ctx6, {
       type: 'pie',
       data: {
-        labels: ['KM 10', 'COLPO'],
+        labels: ['Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [71.151, 39.391],
+          data: [107.292],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
-            'rgba(54, 162, 235, 0.2)'
           ],
           borderColor: [
             'rgba(255,99,132,1)',
-            'rgba(54, 162, 235, 1)'
           ],
           borderWidth: 1
         }]
@@ -444,19 +449,23 @@
     var myChart = new Chart(ctx7, {
       type: 'pie',
       data: {
-        labels: ['KM 10', 'COLPO', 'RF Lumber'],
+        labels: ['KM 10', 'COLPO', 'RF Lumber','Aravena','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [178.27, 227.85, 105.50],
+          data: [247.74, 412.53,237.83,38.57,214.74],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
+            'rgba(0, 206, 86, 0.2)',
+            'rgba(255, 0, 86, 0.2)',
           ],
           borderColor: [
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
+            'rgba(0, 206, 86, 1)',
+            'rgba(255, 0, 86, 0.1)',
 
           ],
           borderWidth: 1
@@ -474,15 +483,16 @@
     var myChart = new Chart(ctx8, {
       type: 'pie',
       data: {
-        labels: ['KM 10', 'COLPO', 'RF Lumber', 'Aravena', 'Cherquenco'],
+        labels: ['KM 10', 'COLPO', 'RF Lumber', 'Aravena', 'Cherquenco','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [1839.56, 1703.85, 105.50, 251.5, 43.53],
+          data: [1909.02, 1888.53, 237.83, 290.07, 43.53, 214.74],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 0.2)',
+            'rgba(75, 192, 0, 0.2)',
             'rgba(0, 99, 132, 0.5)',
           ],
           borderColor: [
@@ -490,6 +500,7 @@
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
+            'rgba(75, 192, 0, 1)',
             'rgba(0, 99, 132, 1)',
 
           ],
@@ -507,111 +518,159 @@
   <script>
     // Function to fetch and display data from the API
 
+async function fetchData() {
+  const apiURL = 'http://controlforestal.pablocanales.info/api/despachos/search?token=dq02SQSq4oruM7SedTgwb4rEB7Bp9QZ4&order_by=fecha_ingreso&order_dir=desc&metros=true&desde=2023-03-01&hasta=2023-17-09';
+
+  try {
+    const response = await fetch(apiURL);
+    const data = await response.json();
+
+    var date = new Date();
+
+    if (response.ok) {
+      const despachosList = document.getElementById('despachos-list');
+      let contador_0 = 0;
+      let contador_m3 = 0;
+
+      //                     switch(date.getDay()){
+
+      //   case 0: alert("domingo!"); break;
+
+      //   case 1: alert("lunes!"); break;
+      //   case 2: alert("martes!"); break;
+      //   case 3: alert("miercoles!"); break;
+      //   case 4: alert("jueves!"); break;
+      //   case 5: alert("viernes!"); break;
+      //     case 6: alert("sabado!"); break;
+      //     default: alert("any other week day");
+      // }
+
+      let first_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
+        - date_today.getDay() + 1));
+      console.log(`The first date of the week is: ${first_day_of_the_week}`);
 
 
-    async function fetchData() {
-      const apiURL = 'http://controlforestal.pablocanales.info/api/despachos?token=dq02SQSq4oruM7SedTgwb4rEB7Bp9QZ4';
+      let last_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
+        - date_today.getDay() + 7));
 
-      try {
-        const response = await fetch(apiURL);
-        const data = await response.json();
+      let cont_lunes = 0;
+      let cont_martes = 0;
+      let cont_miercoles = 0;
+      let cont_jueves = 0;
+      let cont_viernes = 0;
+      let cont_sabado = 0;
+      let cont_domingo = 0;
 
-        var date = new Date();
+      let iteracion = 0;
+      let arreglou
 
-        if (response.ok) {
-          const despachosList = document.getElementById('despachos-list');
-          let contador_0 = 0;
-          let contador_m3 = 0;
+      data.forEach((despacho) => {
 
-          //                     switch(date.getDay()){
-
-          //   case 0: alert("domingo!"); break;
-
-          //   case 1: alert("lunes!"); break;
-          //   case 2: alert("martes!"); break;
-          //   case 3: alert("miercoles!"); break;
-          //   case 4: alert("jueves!"); break;
-          //   case 5: alert("viernes!"); break;
-          //     case 6: alert("sabado!"); break;
-          //     default: alert("any other week day");
-          // }
-
-          let first_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
-            - date_today.getDay() + 1));
-          console.log(`The first date of the week is: ${first_day_of_the_week}`);
-
-
-          let last_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
-            - date_today.getDay() + 7));
-
-          let cont_lunes = 0;
-          let cont_martes = 0;
-          let cont_miercoles = 0;
-          let cont_jueves = 0;
-          let cont_viernes = 0;
-          let cont_sabado = 0;
-          let cont_domingo = 0;
-          data.forEach((despacho) => {
-            let fecha = new Date(despacho.fecha_ingreso)
-            //console.log('hola '+fecha)
-            console.log('hola' + fecha.getDay())
-            console.log(`The first date of the week is: ${first_day_of_the_week}`);
-            if (despacho.metros_duros == 0) {
-              contador_0 = contador_0 + 1
-            }
-            /*else{
-              const listItem = document.createElement('li');
-              switch(fecha.getDay()){
-              case 1: diasemana="Lunes";
-              if ((fecha >= first_day_of_the_week)&&(fecha <= last_day_of_the_week)){
-                cont_lunes=cont_lunes+despacho.metros_duros;
-                //console.log(cont_lunes);
-                
-              }   
-                              
-              break;
-              case 2: diasemana="Martes"; break;
-              case 3: diasemana="Miercoles"; break;
-              case 4: diasemana="Jueves"; break;
-              case 5: diasemana="Viernes"; break;
-              case 6: diasemana="Sabado"; break;
-              case 7: diasemana="Domingo"; break;
-            }
-             
-            
-            fecha=fecha.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"});    
-            listItem.textContent = `Guía: ${despacho.numero_guia_despacho}, Fecha: ${fecha} Metros: ${despacho.metros_duros}, Rodal: ${despacho.rodal}`;
-            despachosList.appendChild(listItem);
-                contador_m3=contador_m3 + 1} */
-          })
-          console.log(contador_0);
-          console.log(contador_m3);
+        let fecha = new Date(despacho.fecha_ingreso)
+        // if (iteracion == 0) {
+        //   let myElement1 = document.getElementById("desp_1_1");
+        //   myElement1.innerHTML = despacho.numero_guia_despacho;
+        //   let myElement2 = document.getElementById("desp_1_2");
+        //   myElement2.innerHTML = despacho.numero_guia_sii;
+        //   let myElement3 = document.getElementById("desp_1_3");
+        //   myElement3.innerHTML = despacho.fecha_ingreso;
+        //   let myElement4 = document.getElementById("desp_1_4");
+        //   myElement4.innerHTML = despacho.destino;
+        //   let myElement5 = document.getElementById("desp_1_5");
+        //   myElement5.innerHTML = despacho.metros_duros;
+        //   //myElement = document.getElementById("desp_1_2");
+        //   //myElement.innerHTML = despacho.numero_guia_sii;
+        // }
+        // if (iteracion == 1) {
+        //   let myElement1 = document.getElementById("desp_2_1");
+        //   myElement1.innerHTML = despacho.numero_guia_despacho;
+        //   let myElement2 = document.getElementById("desp_2_2");
+        //   myElement2.innerHTML = despacho.numero_guia_sii;
+        //   let myElement3 = document.getElementById("desp_2_3");
+        //   myElement3.innerHTML = despacho.fecha_ingreso;
+        //   let myElement4 = document.getElementById("desp_2_4");
+        //   myElement4.innerHTML = despacho.destino;
+        //   let myElement5 = document.getElementById("desp_2_5");
+        //   myElement5.innerHTML = despacho.metros_duros;
+        // }
+        // if (iteracion == 2) {
+        //   let myElement1 = document.getElementById("desp_3_1");
+        //   myElement1.innerHTML = despacho.numero_guia_despacho;
+        //   let myElement2 = document.getElementById("desp_3_2");
+        //   myElement2.innerHTML = despacho.numero_guia_sii;
+        //   let myElement3 = document.getElementById("desp_3_3");
+        //   myElement3.innerHTML = despacho.fecha_ingreso;
+        //   let myElement4 = document.getElementById("desp_3_4");
+        //   myElement4.innerHTML = despacho.destino;
+        //   let myElement5 = document.getElementById("desp_3_5");
+        //   myElement5.innerHTML = despacho.metros_duros;
+        // }
+        
+        if (despacho.metros_duros == 0) {
+          contador_0 = contador_0 + 1
         } else {
-          console.error(`Error: ${response.status} - ${data.message}`);
+          contador_m3 = contador_m3 + 1;
         }
-      } catch (error) {
-        console.error('Error:', error);
-      }
+        iteracion=iteracion+1;
+
+
+        //console.log('Metros: ' + despacho.numero_guia_despacho)
+        //console.log(`The first date of the week is: ${first_day_of_the_week}`);
+        /*else{
+          const listItem = document.createElement('li');
+          switch(fecha.getDay()){
+          case 1: diasemana="Lunes";
+          if ((fecha >= first_day_of_the_week)&&(fecha <= last_day_of_the_week)){
+            cont_lunes=cont_lunes+despacho.metros_duros;
+            //console.log(cont_lunes);
+            
+          }   
+                          
+          break;
+          case 2: diasemana="Martes"; break;
+          case 3: diasemana="Miercoles"; break;
+          case 4: diasemana="Jueves"; break;
+          case 5: diasemana="Viernes"; break;
+          case 6: diasemana="Sabado"; break;
+          case 7: diasemana="Domingo"; break;
+        }
+         
+        
+        fecha=fecha.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"});    
+        listItem.textContent = `Guía: ${despacho.numero_guia_despacho}, Fecha: ${fecha} Metros: ${despacho.metros_duros}, Rodal: ${despacho.rodal}`;
+        despachosList.appendChild(listItem);
+            contador_m3=contador_m3 + 1} */
+      })
+      console.log(contador_0);
+      console.log(contador_m3);
+    } else {
+      console.error(`Error: ${response.status} - ${data.message}`);
     }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
 
-    // Call the fetchData function when the page loads
-    window.addEventListener('load', fetchData);
+// Call the fetchData function when the page loads
+window.addEventListener('load', fetchData);
 
-    let date_today = new Date();
-
-
-    console.log(`The current day index of the week is: ${date_today.getDay()}`);
-
-
-    console.log(`The current date of the week is: ${date_today.getDate()}`);
+let date_today = new Date();
 
 
+console.log(`The current day index of the week is: ${date_today.getDay()}`);
 
 
-//console.log(`The first date of the week is: ${first_day_of_the_week}`); 
+console.log(`The current date of the week is: ${date_today.getDate()}`);
+
+
+
+
+//console.log(`The first date of the week is: ${first_day_of_the_week}`);
 //console.log(`The last day of the week is: ${last_day_of_the_week}`);
 
   </script>
+
+  
 </body>
 
 </html>
