@@ -33,25 +33,25 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row" id="desp_1_1">144</th>
-            <td id="desp_1_2">16440</td>
-            <td id="desp_1_3">2023-10-18</td>
+            <th scope="row" id="desp_1_1">148</th>
+            <td id="desp_1_2">16444</td>
+            <td id="desp_1_3">2023-10-20</td>
             <td id="desp_1_4">Colpo</td>
-            <td id="desp_1_5">33.156</td>
+            <td id="desp_1_5">33.853</td>
           </tr>
           <tr>
-            <th scope="row" id="desp_2_1">143</th>
-            <td id="desp_2_2">16439</td>
-            <td id="desp_2_3">2023-10-18</td>
-            <td id="desp_2_4">Colpo</td>
-            <td id="desp_2_5">33.978</td>
+            <th scope="row" id="desp_2_1">147</th>
+            <td id="desp_2_2">16443</td>
+            <td id="desp_2_3">2023-10-20</td>
+            <td id="desp_2_4">Km 10</td>
+            <td id="desp_2_5">29.503</td>
           </tr>
           <tr>
-            <th scope="row" id="desp_3_1">142</th>
-            <td id="desp_3_2">16438</td>
-            <td id="desp_3_3">2023-10-17</td>
-            <td id="desp_3_4">Km 10</td>
-            <td id="desp_3_5">36.813</td>
+            <th scope="row" id="desp_3_1">146</th>
+            <td id="desp_3_2">16442</td>
+            <td id="desp_3_3">2023-10-19</td>
+            <td id="desp_3_4">Lumber</td>
+            <td id="desp_3_5">31.963</td>
           </tr>
         </tbody>
       </table>
@@ -90,14 +90,14 @@
           <tr>
             <td>0</td>
             <td>245,99</td>
-            <td>103,94</td>
+            <td>134,00</td>
+            <td>65,81</td>
+            <td>0</td>
+            <td>29,50</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <th scope="row">349,94</th>
+            <th scope="row">475,31</th>
           </tr>
         </tbody>
       </table>
@@ -136,14 +136,14 @@
           <tr>
             <td>0</td>
             <td>350,44</td>
-            <td>289,20</td>
-            <td>268,86</td>
+            <td>319,26</td>
+            <td>334,68</td>
             <td>6,69</td>
-            <td>410,78</td>
+            <td>440,28</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>0</td>
-            <th scope="row">1391,07</th>
+            <th scope="row">1516,44</th>
           </tr>
         </tbody>
       </table>
@@ -227,15 +227,15 @@
         <tbody>
           <tr>
             <td>295,03</td>
-            <td>316,03</td>
-            <td>880,31</td>
-            <td>1315,93</td>
+            <td>451,74</td>
+            <td>1014,32</td>
+            <td>1381,74</td>
             <td>307,58</td>
-            <td>1369,16</td>
+            <td>1398,66</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>34,59</td>
-            <th scope="row">4583,74</th>
+            <th scope="row">4948,77</th>
           </tr>
         </tbody>
       </table>
@@ -257,7 +257,7 @@
         labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
         datasets: [{
           label: 'Metros Despachados esta Semana',
-          data: [107.292, 172.51, 67.133, 0, 0, 0, 0],
+          data: [110.29, 172.51, 67.13, 62.01, 63.35, 0, 0],
           borderWidth: 1
         }]
       },
@@ -293,7 +293,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Metros Despachados este Mes',
-          data: [0, 350.44, 289.20, 268.86, 6.69, 410.78, 34.31, 30.76, 0],
+          data: [0, 350.44, 319.26, 334.68, 6.69, 440.28, 34.31, 30.76, 0],
           borderWidth: 1
         }]
       },
@@ -395,7 +395,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Total Despachos Los Lleuques',
-          data: [295.03, 316.03, 880.31, 1315.93, 307.58, 1369.16, 34.31, 30.76, 34.59],
+          data: [295.03, 451.74, 1014.32, 1381.74, 307.58, 1398.66, 34.31, 30.76, 34.59],
           borderWidth: 1
         }]
       },
@@ -424,19 +424,21 @@
     var myChart = new Chart(ctx6, {
       type: 'pie',
       data: {
-        labels: ['Maihue','KM 10', 'COLPO'],
+        labels: ['Maihue','KM 10', 'COLPO','Lumber'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [245.99, 36.81, 67.13],
+          data: [245.99, 96.37, 100.98,31.96],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
+            'rgba(0, 206, 86, 0.2)',
           ],
           borderColor: [
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
+            'rgba(0, 206, 86, 1)',
           ],
           borderWidth: 1
         }]
@@ -456,7 +458,7 @@
         labels: ['KM 10', 'COLPO', 'RF Lumber','Aravena','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [284.55, 479.53, 237.83,38.57, 350.44],
+          data: [344.11, 513.52, 269.79, 38.57, 350.44],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -490,7 +492,7 @@
         labels: ['KM 10', 'COLPO', 'RF Lumber', 'Aravena', 'Cherquenco','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [1909.02, 1888.53, 237.83, 290.07, 43.53, 214.74],
+          data: [2005.40, 1989.52, 269.79, 290.07, 43.53, 350.44],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
