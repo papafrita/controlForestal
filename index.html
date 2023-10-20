@@ -33,25 +33,25 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row" id="desp_1_1">137</th>
-            <td id="desp_1_2">16433</td>
-            <td id="desp_1_3">2023-10-16</td>
-            <td id="desp_1_4">Maihue</td>
-            <td id="desp_1_5">38.672</td>
+            <th scope="row" id="desp_1_1">144</th>
+            <td id="desp_1_2">16440</td>
+            <td id="desp_1_3">2023-10-18</td>
+            <td id="desp_1_4">Colpo</td>
+            <td id="desp_1_5">33.156</td>
           </tr>
           <tr>
-            <th scope="row" id="desp_2_1">136</th>
-            <td id="desp_2_2">16432</td>
-            <td id="desp_2_3">2023-10-16</td>
-            <td id="desp_2_4">Maihue</td>
-            <td id="desp_2_5">36.153</td>
+            <th scope="row" id="desp_2_1">143</th>
+            <td id="desp_2_2">16439</td>
+            <td id="desp_2_3">2023-10-18</td>
+            <td id="desp_2_4">Colpo</td>
+            <td id="desp_2_5">33.978</td>
           </tr>
           <tr>
-            <th scope="row" id="desp_3_1">119</th>
-            <td id="desp_3_2">16431</td>
-            <td id="desp_3_3">2023-10-16</td>
-            <td id="desp_3_4">Maihue</td>
-            <td id="desp_3_5">35.467</td>
+            <th scope="row" id="desp_3_1">142</th>
+            <td id="desp_3_2">16438</td>
+            <td id="desp_3_3">2023-10-17</td>
+            <td id="desp_3_4">Km 10</td>
+            <td id="desp_3_5">36.813</td>
           </tr>
         </tbody>
       </table>
@@ -90,15 +90,15 @@
         <tbody>
           <tr>
             <td>0</td>
-            <td>107,292</td>
+            <td>245,99</td>
+            <td>103,94</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <td>0</td>
-            <th scope="row">107,292</th>
+            <th scope="row">349,94</th>
           </tr>
         </tbody>
       </table>
@@ -136,15 +136,15 @@
         <tbody>
           <tr>
             <td>0</td>
-            <td>214,74</td>
-            <td>185,26</td>
+            <td>350,44</td>
+            <td>289,20</td>
             <td>268,86</td>
             <td>6,69</td>
             <td>410,78</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>0</td>
-            <th scope="row">1151,42</th>
+            <th scope="row">1391,07</th>
           </tr>
         </tbody>
       </table>
@@ -257,7 +257,7 @@
         labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
         datasets: [{
           label: 'Metros Despachados esta Semana',
-          data: [0, 107.292, 0, 0, 0, 0, 0],
+          data: [107.292, 172.51, 67.133, 0, 0, 0, 0],
           borderWidth: 1
         }]
       },
@@ -293,7 +293,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Metros Despachados este Mes',
-          data: [0, 214.74, 185.26,268.86, 6.69, 410.78, 34.31, 30.76, 0],
+          data: [0, 350.44, 289.20, 268.86, 6.69, 410.78, 34.31, 30.76, 0],
           borderWidth: 1
         }]
       },
@@ -424,15 +424,19 @@
     var myChart = new Chart(ctx6, {
       type: 'pie',
       data: {
-        labels: ['Maihue'],
+        labels: ['Maihue','KM 10', 'COLPO'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [107.292],
+          data: [245.99, 36.81, 67.13],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
           ],
           borderColor: [
             'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
           ],
           borderWidth: 1
         }]
@@ -452,7 +456,7 @@
         labels: ['KM 10', 'COLPO', 'RF Lumber','Aravena','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [247.74, 412.53,237.83,38.57,214.74],
+          data: [284.55, 479.53, 237.83,38.57, 350.44],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
