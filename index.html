@@ -9,7 +9,7 @@
 
   <title>API Control</title>
 
-  <!-- <script src="apiscript.js"></script> -->
+  <script src="apiscript.js"></script>
 
 </head>
 
@@ -33,25 +33,25 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row" id="desp_1_1">148</th>
-            <td id="desp_1_2">16444</td>
-            <td id="desp_1_3">2023-10-20</td>
-            <td id="desp_1_4">Colpo</td>
-            <td id="desp_1_5">33.853</td>
+            <th scope="row" id="desp_1_1"></th>
+            <td id="desp_1_2"></td>
+            <td id="desp_1_3"></td>
+            <td id="desp_1_4"></td>
+            <td id="desp_1_5"></td>
           </tr>
           <tr>
-            <th scope="row" id="desp_2_1">147</th>
-            <td id="desp_2_2">16443</td>
-            <td id="desp_2_3">2023-10-20</td>
-            <td id="desp_2_4">Km 10</td>
-            <td id="desp_2_5">29.503</td>
+            <th scope="row" id="desp_2_1"></th>
+            <td id="desp_2_2"></td>
+            <td id="desp_2_3"></td>
+            <td id="desp_2_4"></td>
+            <td id="desp_2_5"></td>
           </tr>
           <tr>
-            <th scope="row" id="desp_3_1">146</th>
-            <td id="desp_3_2">16442</td>
-            <td id="desp_3_3">2023-10-19</td>
-            <td id="desp_3_4">Lumber</td>
-            <td id="desp_3_5">31.963</td>
+            <th scope="row" id="desp_3_1"></th>
+            <td id="desp_3_2"></td>
+            <td id="desp_3_3"></td>
+            <td id="desp_3_4"></td>
+            <td id="desp_3_5"></td>
           </tr>
         </tbody>
       </table>
@@ -88,16 +88,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>0</td>
-            <td>245,99</td>
-            <td>134,00</td>
+            <td>44,5</td>
+            <td>350,44</td>
+            <td>136,97</td>
             <td>65,81</td>
             <td>0</td>
-            <td>29,50</td>
+            <td>92,22</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <th scope="row">475,31</th>
+            <th scope="row">689,95</th>
           </tr>
         </tbody>
       </table>
@@ -136,14 +136,14 @@
           <tr>
             <td>0</td>
             <td>350,44</td>
-            <td>319,26</td>
+            <td>322,23</td>
             <td>334,68</td>
             <td>6,69</td>
-            <td>440,28</td>
+            <td>503,00</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>0</td>
-            <th scope="row">1516,44</th>
+            <th scope="row">1626,63</th>
           </tr>
         </tbody>
       </table>
@@ -257,7 +257,7 @@
         labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
         datasets: [{
           label: 'Metros Despachados esta Semana',
-          data: [110.29, 172.51, 67.13, 62.01, 63.35, 0, 0],
+          data: [110.29, 172.51, 67.13, 62.01, 63.35, 110.18, 0],
           borderWidth: 1
         }]
       },
@@ -293,7 +293,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Metros Despachados este Mes',
-          data: [0, 350.44, 319.26, 334.68, 6.69, 440.28, 34.31, 30.76, 0],
+          data: [44.5, 350.44, 3.26, 334.68, 6.69, 440.28, 34.31, 30.76, 0],
           borderWidth: 1
         }]
       },
@@ -424,21 +424,23 @@
     var myChart = new Chart(ctx6, {
       type: 'pie',
       data: {
-        labels: ['Maihue','KM 10', 'COLPO','Lumber'],
+        labels: ['Maihue','KM 10', 'COLPO','Lumber','Aravena'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [245.99, 96.37, 100.98,31.96],
+          data: [245.99, 96.37, 100.98, 31.96, 47.46],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
             'rgba(0, 206, 86, 0.2)',
+            'rgba(255, 0, 86, 0.2)',
           ],
           borderColor: [
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
             'rgba(0, 206, 86, 1)',
+            'rgba(255, 0, 86, 0.1)',
           ],
           borderWidth: 1
         }]
@@ -521,8 +523,8 @@
     });
   </script>
 
-  <script>
-    // Function to fetch and display data from the API
+<script>
+  // Function to fetch and display data from the API
 
 async function fetchData() {
   const apiURL = 'http://controlforestal.pablocanales.info/api/despachos/search?token=dq02SQSq4oruM7SedTgwb4rEB7Bp9QZ4&order_by=fecha_ingreso&order_dir=desc&metros=true&desde=2023-03-01&hasta=2023-17-09';
@@ -530,94 +532,148 @@ async function fetchData() {
   try {
     const response = await fetch(apiURL);
     const data = await response.json();
-
+    let arreglox = [];
+    let arr_despachos_semana = [];
     var date = new Date();
 
     if (response.ok) {
       const despachosList = document.getElementById('despachos-list');
-      let contador_0 = 0;
-      let contador_m3 = 0;
-
-      //                     switch(date.getDay()){
-
-      //   case 0: alert("domingo!"); break;
-
-      //   case 1: alert("lunes!"); break;
-      //   case 2: alert("martes!"); break;
-      //   case 3: alert("miercoles!"); break;
-      //   case 4: alert("jueves!"); break;
-      //   case 5: alert("viernes!"); break;
-      //     case 6: alert("sabado!"); break;
-      //     default: alert("any other week day");
-      // }
 
       let first_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
-        - date_today.getDay() + 1));
-      console.log(`The first date of the week is: ${first_day_of_the_week}`);
-
-
+        - date_today.getDay()+1 ));
+      first_day_of_the_week.setHours(00, 00, 1);
       let last_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
         - date_today.getDay() + 7));
+      last_day_of_the_week.setHours(23, 59, 59);
 
-      let cont_lunes = 0;
-      let cont_martes = 0;
-      let cont_miercoles = 0;
-      let cont_jueves = 0;
-      let cont_viernes = 0;
-      let cont_sabado = 0;
-      let cont_domingo = 0;
+
+      let metros_lunes = 0;
+      let metros_martes = 0;
+      let metros_miercoles = 0;
+      let metros_jueves = 0;
+      let metros_viernes = 0;
+      let metros_sabado = 0;
+      let metros_domingo = 0;
+
+      let metros_maihue = 0;
+      let metros_colpo = 0;
+      let metros_km10 = 0;
+      let metros_aravena = 0;
+      let metros_cherquenco = 0;
+      let metros_lumber = 0;
 
       let iteracion = 0;
-      let arreglou
 
+      let conttt = 0;
       data.forEach((despacho) => {
-
+       
+        arreglox.push(despacho.fecha_ingreso);
         let fecha = new Date(despacho.fecha_ingreso)
-        // if (iteracion == 0) {
-        //   let myElement1 = document.getElementById("desp_1_1");
-        //   myElement1.innerHTML = despacho.numero_guia_despacho;
-        //   let myElement2 = document.getElementById("desp_1_2");
-        //   myElement2.innerHTML = despacho.numero_guia_sii;
-        //   let myElement3 = document.getElementById("desp_1_3");
-        //   myElement3.innerHTML = despacho.fecha_ingreso;
-        //   let myElement4 = document.getElementById("desp_1_4");
-        //   myElement4.innerHTML = despacho.destino;
-        //   let myElement5 = document.getElementById("desp_1_5");
-        //   myElement5.innerHTML = despacho.metros_duros;
-        //   //myElement = document.getElementById("desp_1_2");
-        //   //myElement.innerHTML = despacho.numero_guia_sii;
-        // }
-        // if (iteracion == 1) {
-        //   let myElement1 = document.getElementById("desp_2_1");
-        //   myElement1.innerHTML = despacho.numero_guia_despacho;
-        //   let myElement2 = document.getElementById("desp_2_2");
-        //   myElement2.innerHTML = despacho.numero_guia_sii;
-        //   let myElement3 = document.getElementById("desp_2_3");
-        //   myElement3.innerHTML = despacho.fecha_ingreso;
-        //   let myElement4 = document.getElementById("desp_2_4");
-        //   myElement4.innerHTML = despacho.destino;
-        //   let myElement5 = document.getElementById("desp_2_5");
-        //   myElement5.innerHTML = despacho.metros_duros;
-        // }
-        // if (iteracion == 2) {
-        //   let myElement1 = document.getElementById("desp_3_1");
-        //   myElement1.innerHTML = despacho.numero_guia_despacho;
-        //   let myElement2 = document.getElementById("desp_3_2");
-        //   myElement2.innerHTML = despacho.numero_guia_sii;
-        //   let myElement3 = document.getElementById("desp_3_3");
-        //   myElement3.innerHTML = despacho.fecha_ingreso;
-        //   let myElement4 = document.getElementById("desp_3_4");
-        //   myElement4.innerHTML = despacho.destino;
-        //   let myElement5 = document.getElementById("desp_3_5");
-        //   myElement5.innerHTML = despacho.metros_duros;
-        // }
         
-        if (despacho.metros_duros == 0) {
-          contador_0 = contador_0 + 1
-        } else {
-          contador_m3 = contador_m3 + 1;
+        if (( fecha >= first_day_of_the_week)&&(fecha <= last_day_of_the_week)){
+          
+          // console.log(despacho.numero_guia_despacho+' '+despacho.fecha_ingreso.toString().substring(0, 10 )+' '+despacho.destino+' '+despacho.total_metros);
+          
+          // if (despacho.destino.trim()=='Maihue'){
+          //   conttt=conttt+despacho.total_metros;
+          //   console.log('CONTT '+conttt)
+          //   metros_maihue=metros_maihue+despacho.total_metros;
+          //   console.log('MAIHUE');
+  
+          // }
+
+          arr_despachos_semana.push(despacho);
+          switch(fecha.getDay()){
+            case 1: metros_lunes=metros_lunes+despacho.total_metros;
+            break;
+            case 2: metros_martes=metros_martes+despacho.total_metros;
+            break;
+            case 3: metros_miercoles=metros_miercoles+despacho.total_metros;
+            break;
+            case 4: metros_jueves=metros_jueves+despacho.total_metros;
+            break;
+            case 5: metros_viernes=metros_viernes+despacho.total_metros;
+            break;
+            case 6: metros_sabado=metros_sabado+despacho.total_metros;
+            break;
+            case 7: metros_domingo=metros_domingo+despacho.total_metros;
+            break;
+          }
+
+          switch(despacho.destino.trim()){
+            case 'Maihue': metros_maihue=metros_maihue+despacho.total_metros;
+            break;
+            case 'Km10': metros_km10=metros_km10+despacho.total_metros;
+            break;
+            case 'Colpo': metros_colpo=metros_colpo+despacho.total_metros;
+            break;
+            case 'Lumber': metros_lumber=metros_lumber+despacho.total_metros;
+            break;
+            case 'Aravena': metros_aravena=metros_aravena+despacho.total_metros;
+            break;
+            case 'Cherquenco': metros_cherquenco=metros_cherquenco+despacho.total_metros;
+            break;
+          }  
+
+          
+
+            // console.log('Lunes: '+metros_lunes);
+            // console.log('Martes: '+metros_martes);
+            // console.log('Miercoles: '+metros_miercoles);
+            // console.log('Jueves: '+metros_jueves);
+            // console.log('Viernes: '+metros_viernes);
+            // console.log('Sabado: '+metros_sabado);
+            // console.log('Domingo: '+metros_domingo);
+          // console.log(arr_despachos_semana[iteracion]);
+        } 
+
+
+        /* TABLA DE ULTIMOS DESPACHOS */
+        if (iteracion == 0) {
+          let myElement1 = document.getElementById("desp_1_1");
+          myElement1.innerHTML = despacho.numero_guia_despacho;
+          let myElement2 = document.getElementById("desp_1_2");
+          myElement2.innerHTML = despacho.numero_guia_sii;
+          let myElement3 = document.getElementById("desp_1_3");
+          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
+          let myElement4 = document.getElementById("desp_1_4");
+          myElement4.innerHTML = despacho.destino;
+          let myElement5 = document.getElementById("desp_1_5");
+          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
+          //myElement = document.getElementById("desp_1_2");
+          //myElement.innerHTML = despacho.numero_guia_sii;
         }
+        if (iteracion == 1) {
+          let myElement1 = document.getElementById("desp_2_1");
+          myElement1.innerHTML = despacho.numero_guia_despacho;
+          let myElement2 = document.getElementById("desp_2_2");
+          myElement2.innerHTML = despacho.numero_guia_sii;
+          let myElement3 = document.getElementById("desp_2_3");
+          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
+          let myElement4 = document.getElementById("desp_2_4");
+          myElement4.innerHTML = despacho.destino;
+          let myElement5 = document.getElementById("desp_2_5");
+          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
+        }
+        if (iteracion == 2) {
+          let myElement1 = document.getElementById("desp_3_1");
+          myElement1.innerHTML = despacho.numero_guia_despacho;
+          let myElement2 = document.getElementById("desp_3_2");
+          myElement2.innerHTML = despacho.numero_guia_sii;
+          let myElement3 = document.getElementById("desp_3_3");
+          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
+          let myElement4 = document.getElementById("desp_3_4");
+          myElement4.innerHTML = despacho.destino;
+          let myElement5 = document.getElementById("desp_3_5");
+          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
+        }
+
+        
+
         iteracion=iteracion+1;
+        
+     
+
 
 
         //console.log('Metros: ' + despacho.numero_guia_despacho)
@@ -632,8 +688,7 @@ async function fetchData() {
             
           }   
                           
-          break;
-          case 2: diasemana="Martes"; break;
+         
           case 3: diasemana="Miercoles"; break;
           case 4: diasemana="Jueves"; break;
           case 5: diasemana="Viernes"; break;
@@ -646,9 +701,20 @@ async function fetchData() {
         listItem.textContent = `Guía: ${despacho.numero_guia_despacho}, Fecha: ${fecha} Metros: ${despacho.metros_duros}, Rodal: ${despacho.rodal}`;
         despachosList.appendChild(listItem);
             contador_m3=contador_m3 + 1} */
-      })
-      console.log(contador_0);
-      console.log(contador_m3);
+      
+          }
+      
+      )
+      
+      console.log('Maihue: '+' '+metros_maihue);
+      console.log('Km 10: '+' '+metros_km10);
+      console.log('Colpo: '+' '+metros_colpo);
+      console.log('Aravena: '+' '+metros_aravena);
+      console.log('Lumber: '+' '+metros_lumber);
+      console.log('Cherquenco: '+' '+metros_cherquenco);
+      
+
+      
     } else {
       console.error(`Error: ${response.status} - ${data.message}`);
     }
@@ -674,8 +740,7 @@ console.log(`The current date of the week is: ${date_today.getDate()}`);
 //console.log(`The first date of the week is: ${first_day_of_the_week}`);
 //console.log(`The last day of the week is: ${last_day_of_the_week}`);
 
-  </script>
-
+</script>
   
 </body>
 
