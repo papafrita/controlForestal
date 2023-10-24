@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Data Display</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1>API Data</h1>
+    <!-- <ul id="data-list"></ul> -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Guia JAS</th>
+          <th scope="col">Guia SII</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Destino</th>
+          <th scope="col">Metros</th>
+        </tr>
+      </thead>
+      <tbody  id="data-list">
+        <tr>
+          <th scope="row" id="desp_1_1"></th>
+          <td id="desp_1_2"></td>
+          <td id="desp_1_3"></td>
+          <td id="desp_1_4"></td>
+          <td id="desp_1_5"></td>
+        </tr>
+        <tr>
+          <th scope="row" id="desp_2_1"></th>
+          <td id="desp_2_2"></td>
+          <td id="desp_2_3"></td>
+          <td id="desp_2_4"></td>
+          <td id="desp_2_5"></td>
+        </tr>
+        <tr>
+          <th scope="row" id="desp_3_1"></th>
+          <td id="desp_3_2"></td>
+          <td id="desp_3_3"></td>
+          <td id="desp_3_4"></td>
+          <td id="desp_3_5"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+        // Function to make an HTTP GET request to the API
+        function fetchData() {
+            const apiUrl = "http://controlforestal.pablocanales.info/api/despachos/search?token=dq02SQSq4oruM7SedTgwb4rEB7Bp9QZ4&order_by=fecha_ingreso&order_dir=desc&metros=true&desde=2023-03-01&hasta=2023-17-09";
+
+            // Using the fetch API to make the GET request
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    displayData(data); // Call the function to display the data
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        }
+
+        // Function to display the fetched data in a list
+        function displayData(data) {
+            const dataList = document.getElementById("data-list");
+            dataList.innerHTML = ''; // Clear the existing list
+
+            // Loop through the data and create list items
+            data.forEach(despacho => {
+              if ((despacho.origen=='Los Lleuques ')||(despacho.origen=='Los Lleuques')||(despacho.origen=='Lleuques')||(despacho.origen=='Lleuques ')){
+                const listItem = document.createElement("tr");
+                listItem.textContent = `Guía: ${despacho.numero_guia_despacho}, Fecha: ${despacho.fecha_ingreso} Metros: ${despacho.metros_duros}, Rodal: ${despacho.rodal}`;
+                dataList.appendChild(listItem);
+              }
+            });
+        }
+
+        // Call the fetchData function when the page loads
+        fetchData();
+    </script>
+</body>
+</html>
