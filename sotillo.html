@@ -190,7 +190,7 @@
       </div>
     </div>
     <div class="row">
-      <h4 style="font-family:Arial, Helvetica, sans-serif;font-size: 20px;"> Detalle de la Semana</h4>
+      <h4 style="font-family:Arial, Helvetica, sans-serif;font-size: 20px;"> Detalle de Producción</h4>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -510,6 +510,29 @@
         }]
       },
       options: {
+        plugins:{
+          legend: {
+            labels: {
+              boxWidth: 10,
+              boxHeight:10,
+              // This more specific font property overrides the global property
+              font: {
+                size: 12
+              }
+            }
+          },
+          tooltip : {
+
+            displayColors : false,
+            
+            titleFont: {
+              size: 1
+            },
+            bodyFont: {
+              size: 12
+            },
+          }
+        },
         //cutoutPercentage: 40,
         responsive: false,
 
@@ -546,6 +569,29 @@
         }]
       },
       options: {
+        plugins:{
+          legend: {
+            labels: {
+              boxWidth: 10,
+              boxHeight:10,
+              // This more specific font property overrides the global property
+              font: {
+                size: 12
+              }
+            }
+          },
+          tooltip : {
+
+            displayColors : false,
+            
+            titleFont: {
+              size: 1
+            },
+            bodyFont: {
+              size: 12
+            },
+          }
+        },
         //cutoutPercentage: 40,
         responsive: false,
 

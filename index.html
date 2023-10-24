@@ -549,6 +549,7 @@
       type: 'pie',
       data: {
         labels: ['COLPO'],
+        
         datasets: [{
           label: 'M3 Despachados',
           data: [97.40],
@@ -576,6 +577,8 @@
         plugins: {
           legend: {
             labels: {
+              boxWidth: 10,
+              boxHeight:10,
               // This more specific font property overrides the global property
               font: {
                 //size: 26
@@ -626,6 +629,16 @@
       },
       options: {
         plugins:{
+          legend: {
+            labels: {
+              boxWidth: 10,
+              boxHeight:10,
+              // This more specific font property overrides the global property
+              font: {
+                size: 12
+              }
+            }
+          },
           tooltip : {
 
             displayColors : false,
@@ -675,6 +688,16 @@
       },
       options: {
         plugins: {
+          legend: {
+            labels: {
+              boxWidth: 10,
+              boxHeight:10,
+              // This more specific font property overrides the global property
+              font: {
+                size: 12
+              }
+            }
+          },
           tooltip : {
 
 displayColors : false,
