@@ -14,6 +14,42 @@
 </head>
 
 <body>
+ 
+  
+  <ul class="navbar">
+    <li><a href="sotillo.html">Sotillo</a></li>
+    <li><a href="index.html">Lleuques</a></li>
+</ul>
+<style>
+  /* Add some basic CSS for styling the navigation bar */
+  
+
+  
+  ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      border: #333 1px solid;
+  }
+
+  ul.navbar li {
+      display: inline;
+  }
+
+  ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  ul.navbar li a:hover {
+      background-color: #555;
+  }
+</style>
+
   <h1 style="font-family:Arial, Helvetica, sans-serif;font-size: 30px;text-align: center;">Control Forestal - Los LLeuques </h1>
 
   <ul id="despachos-list"></ul>
@@ -88,16 +124,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>44,5</td>
-            <td>350,44</td>
-            <td>136,97</td>
-            <td>65,81</td>
-            <td>0</td>
-            <td>92,22</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <th scope="row">689,95</th>
+            <td>0</td>
+            <td>0</td>
+            <td>97,40</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <th scope="row">97,40</th>
           </tr>
         </tbody>
       </table>
@@ -116,7 +152,34 @@
       </div>
     </div>
     <div class="row">
+      <canvas id="chartId" aria-label="chart" heigth="350" width="580"></canvas>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+   <script>
+      var chrt = document.getElementById("chartId").getContext("2d");
+      var chartId = new Chart(chrt, {
+         type: 'line',
+         data: {
+            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
+            datasets: [{
+               label: "Metros Despachados",
+               data: [0, 71.42, 114.50, 109.65, 105.50, 0, 0, 0, 0, 110.54, 99.96, 108.36, 108.68, 108.03,104.45, 110.29, 172.51, 67.13, 62.01, 63.35, 110.18, 0, 0],
+               backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
+               borderColor: ['black'],
+               borderWidth: 2,
+               pointRadius: 5,
+            }],
+         },
+         options: {
+            responsive: false,
+         },
+      });
+   </script>
+    </div>
+
+    <div class="row">
       <h4 style="font-family:Arial, Helvetica, sans-serif;font-size: 20px;"> Detalle del Mes</h4>
+      <a href="tabladespachos.html">
+      <button type="button" style="margin-left:10px" class="btn btn-success">Despachos</button></a>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -134,16 +197,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>0</td>
+            <td>66,55</td>
             <td>350,44</td>
-            <td>322,23</td>
+            <td>392,35</td>
             <td>334,68</td>
             <td>6,69</td>
-            <td>503,00</td>
+            <td>600,40</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>0</td>
-            <th scope="row">1626,63</th>
+            <th scope="row">1816,21</th>
           </tr>
         </tbody>
       </table>
@@ -226,16 +289,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>295,03</td>
+            <td>361,58</td>
             <td>451,74</td>
-            <td>1014,32</td>
+            <td>1087,41</td>
             <td>1381,74</td>
             <td>307,58</td>
-            <td>1398,66</td>
+            <td>1558,78</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>34,59</td>
-            <th scope="row">4948,77</th>
+            <th scope="row">5248,53</th>
           </tr>
         </tbody>
       </table>
@@ -244,6 +307,44 @@
     <hr style="width: 80%;margin-bottom: 2em;">
 
   </div>
+
+
+        <script>
+		new Chart(document.getElementById("line-chart"), {
+			type : 'line',
+			data : {
+				labels : [ 1500, 1600, 1700, 1750, 1800, 1850,
+						1900, 1950, 1999, 2050 ],
+				datasets : [
+						{
+							data : [ 186, 205, 1321, 1516, 2107,
+									2191, 3133, 3221, 4783, 5478 ],
+							label : "America",
+							borderColor : "#3cba9f",
+							fill : false
+						},
+						{
+							data : [ 1282, 1350, 2411, 2502, 2635,
+									2809, 3947, 4402, 3700, 5267 ],
+							label : "Europe",
+							borderColor : "#e43202",
+							fill : false
+						} ]
+			},
+			options : {
+        plugins : {
+          tooltip : {
+            displayColors	:false
+          }
+        },
+				title : {
+					display : true,
+					text : 'Chart JS Multiple Lines Example'
+				}
+			}
+		});
+  </script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -256,8 +357,8 @@
       data: {
         labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
         datasets: [{
-          label: 'Metros Despachados esta Semana',
-          data: [110.29, 172.51, 67.13, 62.01, 63.35, 110.18, 0],
+          label: 'M3 Semana',
+          data: [97.40, 0, 0, 0, 0, 0, 0],
           borderWidth: 1
         }]
       },
@@ -275,6 +376,16 @@
                 //size: 26
               }
             }
+          },
+          tooltip : {
+            padding : 2,
+            displayColors : false,
+            titleFont: {
+              size: 1
+            },
+            bodyFont: {
+              size: 12
+            },
           }
         }
       }
@@ -293,7 +404,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Metros Despachados este Mes',
-          data: [44.5, 350.44, 3.26, 334.68, 6.69, 440.28, 34.31, 30.76, 0],
+          data: [66.55, 350.44, 392.35, 334.68, 6.69, 600.40, 34.31, 30.76, 0],
           borderWidth: 1
         }]
       },
@@ -309,10 +420,20 @@
           labels: {
             // This more specific font property overrides the global property
             font: {
-              size: 38
+              // size: 38
             }
           }
-        }
+        },
+        tooltip : {
+            padding : 2,
+            displayColors : false,
+            titleFont: {
+              size: 1
+            },
+            bodyFont: {
+              size: 12
+            },
+          }
       }
     });
   </script>
@@ -346,7 +467,17 @@
               size: 28
             }
           }
-        }
+        },
+        tooltip : {
+            padding : 2,
+            displayColors : false,
+            titleFont: {
+              size: 1
+            },
+            bodyFont: {
+              size: 12
+            },
+          }
       }
     });
   </script>
@@ -395,7 +526,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Total Despachos Los Lleuques',
-          data: [295.03, 451.74, 1014.32, 1381.74, 307.58, 1398.66, 34.31, 30.76, 34.59],
+          data: [361.58, 451.74, 1087.41, 1381.74, 307.58, 1558.78, 34.31, 30.76, 34.59],
           borderWidth: 1
         }]
       },
@@ -424,10 +555,10 @@
     var myChart = new Chart(ctx6, {
       type: 'pie',
       data: {
-        labels: ['Maihue','KM 10', 'COLPO','Lumber','Aravena'],
+        labels: ['COLPO'],
         datasets: [{
-          label: 'Metros Despachados',
-          data: [245.99, 96.37, 100.98, 31.96, 47.46],
+          label: 'M3 Despachados',
+          data: [97.40],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -449,6 +580,27 @@
         //cutoutPercentage: 40,
         responsive: false,
 
+        plugins: {
+          legend: {
+            labels: {
+              // This more specific font property overrides the global property
+              font: {
+                //size: 26
+              }
+            }
+          },
+          tooltip : {
+
+            displayColors : false,
+            
+            titleFont: {
+              size: 1
+            },
+            bodyFont: {
+              size: 12
+            },
+          }
+        }
       }
     });
   </script>
@@ -460,7 +612,7 @@
         labels: ['KM 10', 'COLPO', 'RF Lumber','Aravena','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [344.11, 513.52, 269.79, 38.57, 350.44],
+          data: [344.11, 673.64, 269.79, 86.03, 350.44],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -494,7 +646,7 @@
         labels: ['KM 10', 'COLPO', 'RF Lumber', 'Aravena', 'Cherquenco','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [2005.40, 1989.52, 269.79, 290.07, 43.53, 350.44],
+          data: [2005.40, 2149.64, 269.79, 337.53, 43.53, 350.44],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -523,224 +675,7 @@
     });
   </script>
 
-<script>
-  // Function to fetch and display data from the API
 
-async function fetchData() {
-  const apiURL = 'http://controlforestal.pablocanales.info/api/despachos/search?token=dq02SQSq4oruM7SedTgwb4rEB7Bp9QZ4&order_by=fecha_ingreso&order_dir=desc&metros=true&desde=2023-03-01&hasta=2023-17-09';
-
-  try {
-    const response = await fetch(apiURL);
-    const data = await response.json();
-    let arreglox = [];
-    let arr_despachos_semana = [];
-    var date = new Date();
-
-    if (response.ok) {
-      const despachosList = document.getElementById('despachos-list');
-
-      let first_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
-        - date_today.getDay()+1 ));
-      first_day_of_the_week.setHours(00, 00, 1);
-      let last_day_of_the_week = new Date(date_today.setDate(date_today.getDate()
-        - date_today.getDay() + 7));
-      last_day_of_the_week.setHours(23, 59, 59);
-
-
-      let metros_lunes = 0;
-      let metros_martes = 0;
-      let metros_miercoles = 0;
-      let metros_jueves = 0;
-      let metros_viernes = 0;
-      let metros_sabado = 0;
-      let metros_domingo = 0;
-
-      let metros_maihue = 0;
-      let metros_colpo = 0;
-      let metros_km10 = 0;
-      let metros_aravena = 0;
-      let metros_cherquenco = 0;
-      let metros_lumber = 0;
-
-      let iteracion = 0;
-
-      let conttt = 0;
-      data.forEach((despacho) => {
-       
-        arreglox.push(despacho.fecha_ingreso);
-        let fecha = new Date(despacho.fecha_ingreso)
-        
-        if (( fecha >= first_day_of_the_week)&&(fecha <= last_day_of_the_week)){
-          
-          // console.log(despacho.numero_guia_despacho+' '+despacho.fecha_ingreso.toString().substring(0, 10 )+' '+despacho.destino+' '+despacho.total_metros);
-          
-          // if (despacho.destino.trim()=='Maihue'){
-          //   conttt=conttt+despacho.total_metros;
-          //   console.log('CONTT '+conttt)
-          //   metros_maihue=metros_maihue+despacho.total_metros;
-          //   console.log('MAIHUE');
-  
-          // }
-
-          arr_despachos_semana.push(despacho);
-          switch(fecha.getDay()){
-            case 1: metros_lunes=metros_lunes+despacho.total_metros;
-            break;
-            case 2: metros_martes=metros_martes+despacho.total_metros;
-            break;
-            case 3: metros_miercoles=metros_miercoles+despacho.total_metros;
-            break;
-            case 4: metros_jueves=metros_jueves+despacho.total_metros;
-            break;
-            case 5: metros_viernes=metros_viernes+despacho.total_metros;
-            break;
-            case 6: metros_sabado=metros_sabado+despacho.total_metros;
-            break;
-            case 7: metros_domingo=metros_domingo+despacho.total_metros;
-            break;
-          }
-
-          switch(despacho.destino.trim()){
-            case 'Maihue': metros_maihue=metros_maihue+despacho.total_metros;
-            break;
-            case 'Km10': metros_km10=metros_km10+despacho.total_metros;
-            break;
-            case 'Colpo': metros_colpo=metros_colpo+despacho.total_metros;
-            break;
-            case 'Lumber': metros_lumber=metros_lumber+despacho.total_metros;
-            break;
-            case 'Aravena': metros_aravena=metros_aravena+despacho.total_metros;
-            break;
-            case 'Cherquenco': metros_cherquenco=metros_cherquenco+despacho.total_metros;
-            break;
-          }  
-
-          
-
-            // console.log('Lunes: '+metros_lunes);
-            // console.log('Martes: '+metros_martes);
-            // console.log('Miercoles: '+metros_miercoles);
-            // console.log('Jueves: '+metros_jueves);
-            // console.log('Viernes: '+metros_viernes);
-            // console.log('Sabado: '+metros_sabado);
-            // console.log('Domingo: '+metros_domingo);
-          // console.log(arr_despachos_semana[iteracion]);
-        } 
-
-
-        /* TABLA DE ULTIMOS DESPACHOS */
-        if (iteracion == 0) {
-          let myElement1 = document.getElementById("desp_1_1");
-          myElement1.innerHTML = despacho.numero_guia_despacho;
-          let myElement2 = document.getElementById("desp_1_2");
-          myElement2.innerHTML = despacho.numero_guia_sii;
-          let myElement3 = document.getElementById("desp_1_3");
-          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
-          let myElement4 = document.getElementById("desp_1_4");
-          myElement4.innerHTML = despacho.destino;
-          let myElement5 = document.getElementById("desp_1_5");
-          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
-          //myElement = document.getElementById("desp_1_2");
-          //myElement.innerHTML = despacho.numero_guia_sii;
-        }
-        if (iteracion == 1) {
-          let myElement1 = document.getElementById("desp_2_1");
-          myElement1.innerHTML = despacho.numero_guia_despacho;
-          let myElement2 = document.getElementById("desp_2_2");
-          myElement2.innerHTML = despacho.numero_guia_sii;
-          let myElement3 = document.getElementById("desp_2_3");
-          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
-          let myElement4 = document.getElementById("desp_2_4");
-          myElement4.innerHTML = despacho.destino;
-          let myElement5 = document.getElementById("desp_2_5");
-          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
-        }
-        if (iteracion == 2) {
-          let myElement1 = document.getElementById("desp_3_1");
-          myElement1.innerHTML = despacho.numero_guia_despacho;
-          let myElement2 = document.getElementById("desp_3_2");
-          myElement2.innerHTML = despacho.numero_guia_sii;
-          let myElement3 = document.getElementById("desp_3_3");
-          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
-          let myElement4 = document.getElementById("desp_3_4");
-          myElement4.innerHTML = despacho.destino;
-          let myElement5 = document.getElementById("desp_3_5");
-          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
-        }
-
-        
-
-        iteracion=iteracion+1;
-        
-     
-
-
-
-        //console.log('Metros: ' + despacho.numero_guia_despacho)
-        //console.log(`The first date of the week is: ${first_day_of_the_week}`);
-        /*else{
-          const listItem = document.createElement('li');
-          switch(fecha.getDay()){
-          case 1: diasemana="Lunes";
-          if ((fecha >= first_day_of_the_week)&&(fecha <= last_day_of_the_week)){
-            cont_lunes=cont_lunes+despacho.metros_duros;
-            //console.log(cont_lunes);
-            
-          }   
-                          
-         
-          case 3: diasemana="Miercoles"; break;
-          case 4: diasemana="Jueves"; break;
-          case 5: diasemana="Viernes"; break;
-          case 6: diasemana="Sabado"; break;
-          case 7: diasemana="Domingo"; break;
-        }
-         
-        
-        fecha=fecha.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"});    
-        listItem.textContent = `Guía: ${despacho.numero_guia_despacho}, Fecha: ${fecha} Metros: ${despacho.metros_duros}, Rodal: ${despacho.rodal}`;
-        despachosList.appendChild(listItem);
-            contador_m3=contador_m3 + 1} */
-      
-          }
-      
-      )
-      
-      console.log('Maihue: '+' '+metros_maihue);
-      console.log('Km 10: '+' '+metros_km10);
-      console.log('Colpo: '+' '+metros_colpo);
-      console.log('Aravena: '+' '+metros_aravena);
-      console.log('Lumber: '+' '+metros_lumber);
-      console.log('Cherquenco: '+' '+metros_cherquenco);
-      
-
-      
-    } else {
-      console.error(`Error: ${response.status} - ${data.message}`);
-    }
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-
-// Call the fetchData function when the page loads
-window.addEventListener('load', fetchData);
-
-let date_today = new Date();
-
-
-console.log(`The current day index of the week is: ${date_today.getDay()}`);
-
-
-console.log(`The current date of the week is: ${date_today.getDate()}`);
-
-
-
-
-//console.log(`The first date of the week is: ${first_day_of_the_week}`);
-//console.log(`The last day of the week is: ${last_day_of_the_week}`);
-
-</script>
   
 </body>
 
