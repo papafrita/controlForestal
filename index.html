@@ -376,7 +376,7 @@
             }
           },
           tooltip : {
-            padding : 2,
+            padding : 4,
             displayColors : false,
             titleFont: {
               size: 1
@@ -411,28 +411,20 @@
           y: {
             beginAtZero: true
           }
+        },
+        plugins: {
+          tooltip : {
+              padding : 4,
+              displayColors : false,
+              titleFont: {
+                size: 1
+              },
+              bodyFont: {
+                size: 12
+              },
+            }
         }
       },
-      plugins: {
-        legend: {
-          labels: {
-            // This more specific font property overrides the global property
-            font: {
-              // size: 38
-            }
-          }
-        },
-        tooltip : {
-            padding : 2,
-            displayColors : false,
-            titleFont: {
-              size: 1
-            },
-            bodyFont: {
-              size: 12
-            },
-          }
-      }
     });
   </script>
   <script>
@@ -464,18 +456,18 @@
             font: {
               size: 28
             }
-          }
+          },
+          tooltip : {
+              padding : 4,
+              displayColors : false,
+              titleFont: {
+                size: 1
+              },
+              bodyFont: {
+                size: 12
+              },
+            }
         },
-        tooltip : {
-            padding : 2,
-            displayColors : false,
-            titleFont: {
-              size: 1
-            },
-            bodyFont: {
-              size: 12
-            },
-          }
       }
     });
   </script>
@@ -503,14 +495,17 @@
         }
       },
       plugins: {
-        legend: {
-          labels: {
-            // This more specific font property overrides the global property
-            font: {
-              size: 28
+        
+        tooltip : {
+              padding : 4,
+              displayColors : false,
+              titleFont: {
+                size: 1
+              },
+              bodyFont: {
+                size: 12
+              },
             }
-          }
-        }
       }
     });
   </script>
@@ -630,6 +625,19 @@
         }]
       },
       options: {
+        plugins:{
+          tooltip : {
+
+            displayColors : false,
+            
+            titleFont: {
+              size: 1
+            },
+            bodyFont: {
+              size: 12
+            },
+          }
+        },
         //cutoutPercentage: 40,
         responsive: false,
 
@@ -666,6 +674,20 @@
         }]
       },
       options: {
+        plugins: {
+          tooltip : {
+
+displayColors : false,
+
+titleFont: {
+  size: 1
+},
+bodyFont: {
+  size: 12
+},
+}
+        },
+        
         //cutoutPercentage: 40,
         responsive: false,
 
