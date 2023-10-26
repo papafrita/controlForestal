@@ -126,14 +126,14 @@
           <tr>
             <td>0</td>
             <td>0</td>
+            <td>34,12</td>
+            <td>0</td>
+            <td>0</td>
+            <td>126,68</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <td>97,40</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <th scope="row">97,40</th>
+            <th scope="row">160,81</th>
           </tr>
         </tbody>
       </table>
@@ -162,7 +162,7 @@
             labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
             datasets: [{
                label: "Metros Despachados",
-               data: [0, 71.42, 114.50, 109.65, 105.50, 0, 0, 0, 0, 110.54, 99.96, 108.36, 108.68, 108.03,104.45, 110.29, 172.51, 67.13, 62.01, 63.35, 110.18, 0, 97.40],
+               data: [0, 71.42, 114.50, 109.65, 105.50, 0, 0, 0, 0, 110.54, 99.96, 108.36, 108.68, 108.03,104.45, 110.29, 172.51, 67.13, 62.01, 63.35, 110.18, 0, 97.40, 0, 63.41],
                backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
                borderColor: ['black'],
                borderWidth: 2,
@@ -197,16 +197,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>66,55</td>
+            <td>44,55</td>
             <td>350,44</td>
-            <td>392,35</td>
+            <td>356,36</td>
             <td>334,68</td>
             <td>6,69</td>
-            <td>600,40</td>
+            <td>629,68</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>0</td>
-            <th scope="row">1816,21</th>
+            <th scope="row">1787,44</th>
           </tr>
         </tbody>
       </table>
@@ -233,7 +233,7 @@
             <th scope="col">6</th>
             <th scope="col">7</th>
             <th scope="col">8</th>
-            <th scope="col">9+</th>
+            <th scope="col">aserr.</th>
             <th scope="col">Pulpa</th>
             <th scope="col">Total</th>
             
@@ -241,16 +241,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>144,8</td>
-            <td>294,5</td>
-            <td>250,0</td>
+            <td>167,1</td>
+            <td>328,3</td>
+            <td>366,3</td>
             <td>0</td>
-            <td>237,0</td>
-            <td>34,3</td>
+            <td>309,6</td>
+            <td>42,6</td>
             <td>30,8</td>
-            <td>0</td>
-            <td>175,7</td>
-            <th scope="row">1167,1</th>
+            <td>123,1</td>
+            <td>205,4</td>
+            <th scope="row">1573,1</th>
           </tr>
         </tbody>
       </table>
@@ -287,16 +287,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>361,58</td>
+            <td>339,53</td>
             <td>451,74</td>
-            <td>1087,41</td>
+            <td>1051,41</td>
             <td>1381,74</td>
             <td>307,58</td>
-            <td>1558,78</td>
+            <td>1558,06</td>
             <td>34,31</td>
             <td>30,76</td>
             <td>34,59</td>
-            <th scope="row">5248,53</th>
+            <th scope="row">5219,77</th>
           </tr>
         </tbody>
       </table>
@@ -307,41 +307,6 @@
   </div>
 
 
-        <script>
-		new Chart(document.getElementById("line-chart"), {
-			type : 'line',
-			data : {
-				labels : [ 1500, 1600, 1700, 1750, 1800, 1850,
-						1900, 1950, 1999, 2050 ],
-				datasets : [
-						{
-							data : [ 186, 205, 1321, 1516, 2107,
-									2191, 3133, 3221, 4783, 5478 ],
-							label : "America",
-							borderColor : "#3cba9f",
-							fill : false
-						},
-						{
-							data : [ 1282, 1350, 2411, 2502, 2635,
-									2809, 3947, 4402, 3700, 5267 ],
-							label : "Europe",
-							borderColor : "#e43202",
-							fill : false
-						} ]
-			},
-			options : {
-        plugins : {
-          tooltip : {
-            displayColors	:false
-          }
-        },
-				title : {
-					display : true,
-					text : 'Chart JS Multiple Lines Example'
-				}
-			}
-		});
-  </script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -356,7 +321,7 @@
         labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
         datasets: [{
           label: 'M3 Semana',
-          data: [97.40, 0, 0, 0, 0, 0, 0],
+          data: [97.40, 0, 63.41, 0, 0, 0, 0],
           borderWidth: 1
         }]
       },
@@ -402,7 +367,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Metros Despachados este Mes',
-          data: [66.55, 350.44, 392.35, 334.68, 6.69, 600.40, 34.31, 30.76, 0],
+          data: [44.5, 350.44, 356.36, 334.68, 6.69, 629.68, 34.31, 30.76, 0],
           borderWidth: 1
         }]
       },
@@ -548,11 +513,11 @@
     var myChart = new Chart(ctx6, {
       type: 'pie',
       data: {
-        labels: ['COLPO'],
+        labels: ['COLPO','KM 10'],
         
         datasets: [{
           label: 'M3 Despachados',
-          data: [97.40],
+          data: [97.40 ,63.41 ],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -608,7 +573,7 @@
         labels: ['KM 10', 'COLPO', 'RF Lumber','Aravena','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [344.11, 673.64, 269.79, 86.03, 350.44],
+          data: [407.52, 673.64, 269.79, 86.03, 350.44],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -665,7 +630,7 @@
         labels: ['KM 10', 'COLPO', 'RF Lumber', 'Aravena', 'Cherquenco','Maihue'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [2005.40, 2149.64, 269.79, 337.53, 43.53, 350.44],
+          data: [2068.81, 2149.64, 269.79, 337.53, 43.53, 350.44],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
