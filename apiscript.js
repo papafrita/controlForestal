@@ -103,44 +103,44 @@ async function fetchData() {
 
 
         /* TABLA DE ULTIMOS DESPACHOS */
-        if (iteracion == 0) {
-          let myElement1 = document.getElementById("desp_1_1");
-          myElement1.innerHTML = despacho.numero_guia_despacho;
-          let myElement2 = document.getElementById("desp_1_2");
-          myElement2.innerHTML = despacho.numero_guia_sii;
-          let myElement3 = document.getElementById("desp_1_3");
-          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
-          let myElement4 = document.getElementById("desp_1_4");
-          myElement4.innerHTML = despacho.destino;
-          let myElement5 = document.getElementById("desp_1_5");
-          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
-          //myElement = document.getElementById("desp_1_2");
-          //myElement.innerHTML = despacho.numero_guia_sii;
-        }
-        if (iteracion == 1) {
-          let myElement1 = document.getElementById("desp_2_1");
-          myElement1.innerHTML = despacho.numero_guia_despacho;
-          let myElement2 = document.getElementById("desp_2_2");
-          myElement2.innerHTML = despacho.numero_guia_sii;
-          let myElement3 = document.getElementById("desp_2_3");
-          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
-          let myElement4 = document.getElementById("desp_2_4");
-          myElement4.innerHTML = despacho.destino;
-          let myElement5 = document.getElementById("desp_2_5");
-          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
-        }
-        if (iteracion == 2) {
-          let myElement1 = document.getElementById("desp_3_1");
-          myElement1.innerHTML = despacho.numero_guia_despacho;
-          let myElement2 = document.getElementById("desp_3_2");
-          myElement2.innerHTML = despacho.numero_guia_sii;
-          let myElement3 = document.getElementById("desp_3_3");
-          myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
-          let myElement4 = document.getElementById("desp_3_4");
-          myElement4.innerHTML = despacho.destino;
-          let myElement5 = document.getElementById("desp_3_5");
-          myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
-        }
+        // if (iteracion == 0) {
+        //   let myElement1 = document.getElementById("desp_1_1");
+        //   myElement1.innerHTML = despacho.numero_guia_despacho;
+        //   let myElement2 = document.getElementById("desp_1_2");
+        //   myElement2.innerHTML = despacho.numero_guia_sii;
+        //   let myElement3 = document.getElementById("desp_1_3");
+        //   myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
+        //   let myElement4 = document.getElementById("desp_1_4");
+        //   myElement4.innerHTML = despacho.destino;
+        //   let myElement5 = document.getElementById("desp_1_5");
+        //   myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
+        //   //myElement = document.getElementById("desp_1_2");
+        //   //myElement.innerHTML = despacho.numero_guia_sii;
+        // }
+        // if (iteracion == 1) {
+        //   let myElement1 = document.getElementById("desp_2_1");
+        //   myElement1.innerHTML = despacho.numero_guia_despacho;
+        //   let myElement2 = document.getElementById("desp_2_2");
+        //   myElement2.innerHTML = despacho.numero_guia_sii;
+        //   let myElement3 = document.getElementById("desp_2_3");
+        //   myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
+        //   let myElement4 = document.getElementById("desp_2_4");
+        //   myElement4.innerHTML = despacho.destino;
+        //   let myElement5 = document.getElementById("desp_2_5");
+        //   myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
+        // }
+        // if (iteracion == 2) {
+        //   let myElement1 = document.getElementById("desp_3_1");
+        //   myElement1.innerHTML = despacho.numero_guia_despacho;
+        //   let myElement2 = document.getElementById("desp_3_2");
+        //   myElement2.innerHTML = despacho.numero_guia_sii;
+        //   let myElement3 = document.getElementById("desp_3_3");
+        //   myElement3.innerHTML = despacho.fecha_ingreso.toString().substring(0, 10 );
+        //   let myElement4 = document.getElementById("desp_3_4");
+        //   myElement4.innerHTML = despacho.destino;
+        //   let myElement5 = document.getElementById("desp_3_5");
+        //   myElement5.innerHTML = parseFloat(despacho.total_metros).toFixed(2);
+        // }
 
         
 

@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href=stylesheet.css>
-
 
   <title>API Control</title>
 
@@ -20,6 +18,31 @@
     <li><a href="sotillo.html">Sotillo</a></li>
     <li><a href="index.html">Lleuques</a></li>
 </ul>
+<style>
+  /* Add some basic CSS for styling the navigation bar */
+  ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+  }
+
+  ul.navbar li {
+      display: inline;
+  }
+
+  ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  ul.navbar li a:hover {
+      background-color: #555;
+  }
+</style>
   <h1 style="font-family:Arial, Helvetica, sans-serif;font-size: 30px;text-align: center;">Control Forestal - Sotillo </h1>
 
   <ul id="despachos-list"></ul>
@@ -27,7 +50,7 @@
   <div class="container">
     <div class="row">
       <h4 style="font-family:Arial, Helvetica, sans-serif;font-size: 20px;"> Últimos Despachos</h4>
-      <table class="tabla-ultimos-despachos table table-striped">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Guia JAS</th>
@@ -39,33 +62,33 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row" id="desp_1_1">5</th>
-            <td id="desp_1_2">20005</td>
-            <td id="desp_1_3">2023/10/23</td>
+            <th scope="row" id="desp_1_1">27</th>
+            <td id="desp_1_2">10015</td>
+            <td id="desp_1_3">2023-10-30</td>
             <td id="desp_1_4">F. Cudico</td>
-            <td id="desp_1_5">34.48</td>
+            <td id="desp_1_5">29,18</td>
           </tr>
           <tr>
-            <th scope="row" id="desp_2_1">4</th>
-            <td id="desp_2_2">20004</td>
-            <td id="desp_2_3">2023/10/23</td>
-            <td id="desp_2_4">Novoa</td>
-            <td id="desp_2_5">35.28</td>
+            <th scope="row" id="desp_2_1">26</th>
+            <td id="desp_2_2">10014</td>
+            <td id="desp_2_3">2023-10-30</td>
+            <td id="desp_2_4">F. Cudico</td>
+            <td id="desp_2_5">22,30</td>
           </tr>
           <tr>
-            <th scope="row" id="desp_3_1">3</th>
-            <td id="desp_3_2">20003</td>
-            <td id="desp_3_3">2023/10/20</td>
-            <td id="desp_3_4">.</td>
-            <td id="desp_3_5">22.05</td>
+            <th scope="row" id="desp_3_1">25</th>
+            <td id="desp_3_2">10013</td>
+            <td id="desp_3_3">2023-10-26</td>
+            <td id="desp_3_4">F. Cudico</td>
+            <td id="desp_3_5">35,107</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="seccion">
+    <div style="border: 1px solid #666666;padding-left: 1.5em;padding-right: 1.5em;border-radius: 1em;margin-bottom: 1em;">
     <div class="row">
       <div class="col">
-        <canvas width="" id="myChart"></canvas>
+        <canvas id="myChart"></canvas>
       </div>
       <div class="col">
         <div>
@@ -96,20 +119,20 @@
           <tr>
             <td>0</td>
             <td>0</td>
-            <td>49,53</td>
-            <td>0</td>
-            <td>15,54</td>
-            <td>4,69</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <th scope="row">69,76</th>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <th scope="row">0</th>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-    <div class="seccion">
+    <div style="border: 1px solid #666666;padding-left: 1.5em;padding-right: 1.5em;border-radius: 1em;margin-bottom: 1em;">
     <div class="row">
       <div class="col">
         <canvas id="myChart2"></canvas>
@@ -142,28 +165,28 @@
         </thead>
         <tbody>
           <tr>
-            <td>22,05</td>
-            <td>0</td>
-            <td>119,65</td>
-            <td>0</td>
-            <td>15,54</td>
-            <td>4,69</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
-            <th scope="row">161,94</th>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <th scope="row">0</th>
           </tr>
         </tbody>
       </table>
     </div>
     </div>
-    <div class="seccion">
+    <div style="border: 1px solid #666666;padding-left: 1.5em;padding-right: 1.5em;border-radius: 1em;margin-bottom: 1em;">
     <div class="row">
       <div class="col">
         <canvas id="myChart3"></canvas>
       </div>
       <div class="col">
-        <canvas id="myChart5"></canvas>
+        <!-- <canvas id="myChart5"></canvas> -->
       </div>
     </div>
     <div class="row">
@@ -186,22 +209,22 @@
         </thead>
         <tbody>
           <tr>
-            <td>14,5</td>
-            <td>311,7</td>
-            <td>74,3</td>
-            <td>56,7</td>
-            <td>26,1</td>
-            <td>18,7</td>
+            <td>71,4</td>
+            <td>345,0</td>
+            <td>423,6</td>
+            <td>133,4</td>
+            <td>66,4</td>
+            <td>36,9</td>
             <td>17,0</td>
-            <td>57,1</td>
-            <td>45,8</td>
-            <th scope="row">621,8</th>
+            <td>201,5</td>
+            <td>167,6</td>
+            <th scope="row">1.462,7</th>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-    <div class="seccion">
+    <div style="border: 1px solid #666666;padding-left: 1.5em;padding-right: 1.5em;border-radius: 1em;margin-bottom: 1em;">
     <div class="row">
       <div class="col">
         <canvas id="myChart4"></canvas>
@@ -232,16 +255,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>22,05</td>
+            <td>132,93</td>
             <td>0</td>
-            <td>119,65</td>
+            <td>495,82</td>
+            <td>123,33</td>
+            <td>79,83</td>
+            <td>34,85</td>
+            <td>20,81</td>
             <td>0</td>
-            <td>15,54</td>
-            <td>4,69</td>
             <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <th scope="row">161,94</th>
+            <th scope="row">887,59</th>
           </tr>
         </tbody>
       </table>
@@ -264,7 +287,7 @@
         labels: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
         datasets: [{
           label: 'Metros Despachados esta Semana',
-          data: [69.76, 0, 0, 0, 0, 0, 0],
+          data: [0, 0, 0, 0, 0, 0, 0],
           borderWidth: 1
         }]
       },
@@ -300,7 +323,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Metros Despachados este Mes',
-          data: [22.05, 0, 119.65, 0, 15.54, 4.69, 0, 0, 0],
+          data: [ 0, 0, 0],
           borderWidth: 1
         }]
       },
@@ -368,7 +391,7 @@
         labels: ['2.50', '3.3 D', '3.3 G', '4.0', '5.0', '6.0', '7.0', '2,50 Leña', '2,50 MR'],
         datasets: [{
           label: 'Producción Sotillo',
-          data: [14.5, 311.7, 74.3, 56.7, 26.1, 18.7, 17.0, 57,1, 45.8],
+          data: [71.4, 345.0, 423.6, 133.4, 66.4, 36.9, 17.0, 201.5, 167.6],
           borderWidth: 1,
           backgroundColor: '#F1624490'
         }]
@@ -402,7 +425,7 @@
         labels: ['MR', '2.50', '3.20', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0+'],
         datasets: [{
           label: 'Total Despachos Sotillo',
-          data: [22.05, 0, 119.65, 0, 15.54, 4.69, 0, 0, 0],
+          data: [132.93, 0, 495.82, 123.33, 79.83, 34.85, 20.81, 0, 0],
           borderWidth: 1
         }]
       },
@@ -431,10 +454,10 @@
     var myChart = new Chart(ctx6, {
       type: 'pie',
       data: {
-        labels: ['.'],
+        labels: [''],
         datasets: [{
           label: 'Metros Despachados',
-          data: [69.76],
+          data: [1],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -452,9 +475,11 @@
           borderWidth: 1
         }]
       },
+      
       options: {
         //cutoutPercentage: 40,
         responsive: false,
+        
 
       }
     });
@@ -464,10 +489,10 @@
     var myChart = new Chart(ctx7, {
       type: 'pie',
       data: {
-        labels: ['.','Novoa', 'F. Cudico'],
+        labels: ['Novoa', 'F. Cudico'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [92.17, 35.28, 34.48],
+          data: [1,1],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
@@ -521,10 +546,10 @@
     var myChart = new Chart(ctx8, {
       type: 'pie',
       data: {
-        labels: ['.','Novoa', 'F. Cudico'],
+        labels: ['Novoa','Km10', 'F. Cudico'],
         datasets: [{
           label: 'Metros Despachados',
-          data: [92.17, 35.28, 34.48],
+          data: [35.28, 244.16, 608.14],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
             'rgba(54, 162, 235, 0.2)',
